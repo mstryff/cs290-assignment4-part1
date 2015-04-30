@@ -44,6 +44,15 @@
             $runTable = false;
         }
     }
+
+    foreach($_GET as $key => $value)
+    {
+        if($value < 0)
+        {
+            echo "$key must be non-negative.<br/>";
+            $runTable = false;
+        }
+    }
     
     if($min_multiplicand > $max_multiplicand)
     {
@@ -55,10 +64,8 @@
         echo "Minimum multiplier larger than maximum multiplier.<br/>";
         $runTable = false;
     }
-
-    $tableHeight = ($max_multiplicand - $min_multiplicand) + 2;
-    $tableWidth = ($max_multiplier - $min_multiplier) + 2;
     
+    //Create table if all prerequisites are met.
     if($runTable):
 ?>
 <body>
