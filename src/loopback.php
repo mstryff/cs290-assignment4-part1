@@ -9,6 +9,10 @@
     $encodeArray = array();
     $encode = true;
     
+    /*
+        I found $_SERVER['REQUEST_METHOD'] at http://stackoverflow.com/questions/22265509/why-should-we-use-if-serverrequest-method-post
+        This accesses the SERVER superglobal and returns the request method(GET or POST)
+    */
     if($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         $type = 'POST';
@@ -25,6 +29,10 @@
 
     if($encode)
     {
+        /*
+            $_SERVER['CONTENT_LENGTH'] from http://stackoverflow.com/questions/1361451/get-size-of-post-request-in-php
+            This returns the length of a POST or GET request, which I used to assert that the request was not empty.
+        */
         if($type == 'POST' && $_SERVER['CONTENT_LENGTH'] != 0)
         {
             foreach($_POST as $key => $value)
