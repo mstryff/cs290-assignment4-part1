@@ -1,3 +1,11 @@
-1. Started at 2.
+Start: Thu, 30 Apr 2015 14:00:00
+End: Thu, 30 Apr 2015 16:13:56
+Tasks: multtable.php / removed functionality for negative numbers.
 
-2. Started at 5. End at 6.
+Start: Thu, 30 Apr 2015 17:00:00
+End: Thu, 30 Apr 2015 17:59:26
+Tasks: loopback.php
+
+Start: Fri, 1 May 2015 14:30:00
+End: Fri, 1 May 2015 16:42:36
+Tasks: login, content1, content2
